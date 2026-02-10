@@ -3,17 +3,14 @@
     {
       "id": "ado_org",
       "type": "promptString",
-      "description": "Azure DevOps organization name  (e.g. 'contoso')"
+      "description": "jostwal"
     }
   ],
   "servers": {
     "ado": {
       "type": "stdio",
-      "command": "mcp-server-azuredevops",
-      "args": ["${input:ado_org}"],
-      "env": {
-        "LOG_LEVEL": "debug"
-      }
+      "command": "npx",
+      "args": ["-y", "@azure-devops/mcp", "${input:jostwal}"]
     }
   }
 }
